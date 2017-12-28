@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center"><span class="glyphicon glyphicon-search"></span>Friend Finder Survey</h1>
+            <hr>
+            <h3 class="text-center">Answer these questions to find your next BFF!</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Tell us about yourself</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="name">Name (Required) </label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="role">Link to Photo (Required) </label>
+                                <input type="text" class="form-control" id="photo">
+                            </div>
+
+                            <hr>
+    
+                            <div class="form-group">
+                                <h3>Question 1</h3>
+                                <h4>Dogs or Cats?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Dogs</option>
+                                  <option value="2">Cats</option>
+                                  <option value="3">Both</option>
+                                  <option value="4">Neither</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3>Question 2</h3>
+                                <h4>Phone Calls or Texts?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Call me</option>
+                                  <option value="2">Text me</option>
+                                  <option value="3">Doesn't matter</option>
+                                  <option value="4">Leave me alone</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3>Question 3</h3>
+                                <h4>Work Hard or Play Hard?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Work, work, work, work...</option>
+                                  <option value="2">Play, all day</option>
+                                </select>
+                            </div>                   <div class="form-group">
+                                <h3>Question 4</h3>
+                                <h4>Rich Friends or Loyal Friends?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Rich friends</option>
+                                  <option value="2">Loyal friends</option>
+                            </div>
+                            <div class="form-group">
+                                <h3>Question 5</h3>
+                                <h4>Passenger or Driver?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Driver</option>
+                                  <option value="2">Passenger</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3>Question 6</h3>
+                                <h4>Pancake or Waffle?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Pancake</option>
+                                  <option value="2">Waffle</option>
+                            </div>
+                                </select>                        
+                            <div class="form-group">
+                                <h3>Question 7</h3>
+                                <h4>International Vacation or a New TV?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Vacation</option>
+                                  <option value="2">TV</option>
+                                </select>
+                            </div>                          <div class="form-group">
+                                <h3>Question 8</h3>
+                                <h4>Ocean or Mountains?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Ocean</option>
+                                  <option value="2">Mountains</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3>Question 9</h3>
+                                <h4>Ninjas or Pirates?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Ninjas</option>
+                                  <option value="2">Pirates</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3>Question 10</h3>
+                                <h4>Cups in the cupboard: Right Side Up or Up Side Down?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Upside Down</option>
+                                  <option value="2">Right Side Up</option>
+                                </select>
+                            </div>                             
+                        </form>
+                        <br>
+                        <div class="text-left">
+                            <button type="submit" class="btn btn-primary btn-md" id="submit-button">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div>
+        <a id="friends-list-link" href="/api/friends">API Friends List</a> &bull;
+        <a id="github-link" href="https://github.com/Jihanna02/friend-finder">GitHub Repo</a>
+    </div>
+
+    <script type="text/javascript">
+    $("#submit-button").on("click", function(event) {
+        event.preventDefault();
+
+        var newFriend = {
+            name: $("#name").val(),
+            phone: $("#phone").val(),
+            email: $("#email").val(),
+            uniqueID: $("#uniqueID").val()
+        };
+
+        $.post("/api/friends", newreservation)
+            .done(function(data) {
+                console.log(data);
+                alert("Adding reservation...");
+            });
+    });
+    </script>
+</body>
+
+</html>
