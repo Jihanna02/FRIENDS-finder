@@ -4,32 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Friend Finder</title>
-    <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="jumbotron">
-            <h1 class="text-center"><span class="glyphicon glyphicon-search"></span>Friend Finder</h1>
-            <hr>
+            <h1 class="text-center">Baltimore<br><span class="glyphicon glyphicon-search"></span>Friend Finder</h1>
             <h3 class="text-center">Answer a few basic questions, 
             <br>
             then find the friend with the greatest compatibility!
             </h3>
             <div class="text-center">
                 <a href="/survey">
-                    <button type="button" class="btn btn-primary btn-lg" id="tablebutton"><span class="glyphicon glyphicon-list-alt"></span>Go to Survey</button>
+                    <button type="button" class="btn btn-primary btn-lg" id="tablebutton">Go to Survey</button>
                 </a>
             </div>
         </div>
-
-        <div>
+    </div>
+    <div class="footer">
         <a id="friends-list-link" href="../api/friends">API Friends List</a> &bull;
         <a id="github-link" href="https://github.com/Jihanna02/friend-finder">GitHub Repo</a>
-        </div>
     </div>
 
     <script type="text/javascript">

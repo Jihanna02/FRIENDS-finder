@@ -1,0 +1,11 @@
+.container-fluid{ 
+	padding: 15% 25%;
+	background-image: url("../img/bg.jpg");
+	background-size: cover;
+	height: 95vh;
+}	
+
+.jumbotron {
+	background-color: rgba(255, 255, 255, 0.85);
+	/*height: 90vh;*/
+}

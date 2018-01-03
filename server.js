@@ -1,6 +1,7 @@
 //NPM Dependencies
 var express = require("express");
 var bodyParser = require("body-parser");
+var path = require("path");
 
 //Express server set-up
 var app = express();
@@ -9,6 +10,9 @@ var PORT = process.env.PORT || 3000;
 //Body Parser set-up
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+//Makes public files accessable
+app.use(express.static(path.join(__dirname, 'app/public')));
 
 //API and HTML Routing
 require("./app/routing/apiRoutes.js")(app);
