@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center"><span class="glyphicon glyphicon-search"></span>Friend Finder Survey</h1>
+            <hr>
+            <h3 class="text-center">Answer these questions to find your next BFF!</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Tell us about yourself</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="name">Name (Required) </label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="photo">Link to Photo (Required) </label>
+                                <input type="text" class="form-control" id="photo">
+                            </div>
+
+                            <hr>
+    
+                            <div class="form-group">
+                                <h3>Question 1</h3>
+                                <h4>Someone tries to jack you on the street, what do you do?</h4>
+                                <select class="custom-select custom-select-lg mb-3" id="q1">
+                                  <option selected>Select One</option>
+                                  <option value="1">Talk your way out of it</option>
+                                  <option value="2">Show them empty pockets</option>
+                                  <option value="3">Give them what they want, no need to get hurt.</option>
+                                  <option value="4">Punch them in the face. Nobody's jacking me!</option>
+                                  <option value="5">Start crying and beg to keep my money.</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3>Question 2</h3>
+                                <h4>It's Valentine's Day, what do you buy your sweetheart?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Jewelry</option>
+                                  <option value="2">Flowers and Chocolates</option>
+                                  <option value="3">A gift card</option>
+                                  <option value="4">An expensive bottle of wine</option>
+                                  <option value="6">Which sweetheart?</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3>Question 3</h3>
+                                <h4>You're kicking it with your homies, what are you down for tonight?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Clubbing</option>
+                                  <option value="2">Bar hopping</option>
+                                  <option value="3">Gambling</option>
+                                  <option value="4">Trash talking</option>
+                                  <option value="5">Trivia night!</option>
+                                </select>
+                            </div>                   
+                            <div class="form-group">
+                                <h3>Question 4</h3>
+                                <h4>Oh no! You've just been arrested, what is the charge?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Fraud</option>
+                                  <option value="2">Shoplifting</option>
+                                  <option value="3">Public Intoxication</option>
+                                  <option value="4">Identity Theft</option>
+                                  <option value="5">Tax Evasion</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3>Question 5</h3>
+                                <h4>Well, you've been convicted and are going to prison, how are you going to spend your time?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Life weights and watch my back</option>
+                                  <option value="2">Join a gang for protection</option>
+                                  <option value="3">Take some classes and read</option>
+                                  <option value="4">Amass a fortune in cigarettes</option>
+                                  <option value="5">Plan my escape!</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3>Question 6</h3>
+                                <h4>You've just escaped a life-or-death situation. What do you vow to change?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Stop worrying and enjoy life more</option>
+                                  <option value="2">Stop gossiping</option>
+                                  <option value="3">Be more responsible</option>
+                                  <option value="4">Spend more time with my family</option>
+                                  <option value="5">Donate more to charity</option>
+                                </select>
+                            </div>                        
+                            <div class="form-group">
+                                <h3>Question 7</h3>
+                                <h4>What's your biggest weakness?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">I'm too honest</option>
+                                  <option value="2">I'm selfish</option>
+                                  <option value="3">I care way too much</option>
+                                  <option value="4">I'm a workaholic</option>
+                                  <option value="5">I don't take things seriously</option>
+                                </select>
+                            </div>                          
+                            <div class="form-group">
+                                <h3>Question 8</h3>
+                                <h4>You're looking for a new job, what are you looking for?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">A challenge</option>
+                                  <option value="2">Something in management</option>
+                                  <option value="3">Something meaningful</option>
+                                  <option value="4">The money!</option>
+                                  <option value="5">Whatever I can get - any job is better than no job.</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3>Question 9</h3>
+                                <h4>You're robbing a bank, what role do you play?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">The bagman</option>
+                                  <option value="2">The distraction</option>
+                                  <option value="3">The gunman</option>
+                                  <option value="4">The safecracker</option>
+                                  <option value="5">The getaway driver</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3>Question 10</h3>
+                                <h4>How do you get through tough times?</h4>
+                                <select class="custom-select custom-select-lg mb-3">
+                                  <option selected>Select One</option>
+                                  <option value="1">Find humor in the situation and cope</option>
+                                  <option value="2">Do whatever it takes to get by</option>
+                                  <option value="3">Dump my problems onto someone else</option>
+                                  <option value="4">Devise a plan to make things better</option>
+                                  <option value="5">Need something here</option>
+                                </select>
+                            </div>                             
+                        </form>
+                        <br>
+                        <div class="text-left">
+                            <button type="submit" class="btn btn-primary btn-md" id="submit-button">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div>
+        <a id="friends-list-link" href="../api/friends">API Friends List</a> &bull;
+        <a id="github-link" href="https://github.com/Jihanna02/friend-finder">GitHub Repo</a>
+    </div>
+
+    <script type="text/javascript">
+    $("#submit-button").on("click", function(event) {
+        event.preventDefault();
+
+        var newFriend = {
+            name: $("#name").val(),
+            phone: $("#photo").val(),
+
+            q1: $("#q1").val(),
+            q2: $("#q2").val(),
+            q3: $("#q3").val(),
+            q4: $("#q4").val(),
+            q5: $("#q5").val(),
+            q6: $("#q6").val(),
+            q7: $("#q7").val(),
+            q8: $("#q8").val(),
+            q9: $("#q9").val(),
+            q10: $("#q10").val(),
+
+        };
+
+        $.post("../app/data/friends.js", newFriend)
+            .done(function(data) {
+                console.log(data);
+            });
+    });
+    </script>
+</body>
+
+</html>

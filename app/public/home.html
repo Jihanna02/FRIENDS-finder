@@ -15,9 +15,9 @@
         <div class="jumbotron">
             <h1 class="text-center"><span class="glyphicon glyphicon-search"></span>Friend Finder</h1>
             <hr>
-            <h3 class="text-center">Answer a few basic questions. 
+            <h3 class="text-center">Answer a few basic questions, 
             <br>
-            Then find the friend with the greatest compatibility!
+            then find the friend with the greatest compatibility!
             </h3>
             <div class="text-center">
                 <a href="/survey">
@@ -27,14 +27,14 @@
         </div>
 
         <div>
-        <a id="friends-list-link" href="/api/friends">API Friends List</a> &bull;
+        <a id="friends-list-link" href="../api/friends">API Friends List</a> &bull;
         <a id="github-link" href="https://github.com/Jihanna02/friend-finder">GitHub Repo</a>
-    </div>
+        </div>
     </div>
 
     <script type="text/javascript">
     $("#friends-list-link").on("click", function() {
-        $.get("/api/friends", function(data) {});
+        $.get("../data/friends", function(data) {});
     });
     $("#github-link").on("click", function() {
         $.get("https://github.com/Jihanna02/friend-finder", function(data) {});
