@@ -9,7 +9,7 @@ module.exports = function(app) {
     res.json(friendsList);
   });
 
-  app.post("../public/survey", function(req, res) {
+  app.post("../data/friends", function(req, res) {
     //adds form data to FriendsList object
     friendsList.push(newFriend);
       res.json(true);
