@@ -2,10 +2,40 @@
 	padding: 15% 25%;
 	background-image: url("../img/bg.jpg");
 	background-size: cover;
-	height: 95vh;
+	background-position: -20px center;
+	height: 100vh;
 }	
+
+body {
+	background-image: url("../img/bg-2.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
 
 .jumbotron {
 	background-color: rgba(255, 255, 255, 0.85);
-	/*height: 90vh;*/
+	margin: 0;
+}
+
+.jumbotron.round {
+    border-radius: 250px;
+}
+
+.logo {
+	width: 60%;
+}
+body {
+	font-family: 'Overpass', sans-serif;
+}
+
+h1 {
+	font-family: 'Kalam', cursive;
+}
+
+.jumbotron h1 {
+    font-size: 45px;
+}
+
+h3{
+	font-family: 'Happy Monkey', cursive;
 }
