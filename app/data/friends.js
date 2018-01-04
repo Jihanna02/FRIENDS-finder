@@ -82,3 +82,8 @@ var friendsList = [
 ];
 
 module.exports = friendsList;
+
+//for loop of friendsList, calculate the difference between scores for each question, push differences to array, sum differences, push to another array so it's one overall score
+//figure out what the lowest index is
+//return the info from that index
+

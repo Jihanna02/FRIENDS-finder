@@ -7,196 +7,243 @@
     <link href="https://fonts.googleapis.com/css?family=Happy+Monkey|Overpass|Kalam" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
         <div class="jumbotron">
-            <h1 class="text-center"><img src="/img/friends-logo.png" class="logo"><br>FINDER</h1>
+            <h1 class="text-center"><img src="/img/friends-logo.png" class="logo" alt="logo"><br>FINDER</h1>
             <h3 class="text-center">Answer these questions to find your next BFF!</h3>
         </div>
+
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><strong>Tell us about yourself</strong></h3>
-                    </div>
-                    <div class="panel-body">
-                        <form role="form">
-                            <div class="form-group">
-                                <label for="name">Name (Required) </label>
-                                <input type="text" class="form-control" id="name">
-                            </div>
-                            <div class="form-group">
-                                <label for="photo">Link to Photo (Required) </label>
-                                <input type="text" class="form-control" id="photo">
-                            </div>
+                  <div class="panel-heading">
+                      <h3 class="panel-title"><strong>Tell us about yourself</strong></h3>
+                  </div>
+                  <div class="panel-body">
+                      <form role="form">
+                          <div class="form-group">
+                              <label for="name">Name (Required) </label>
+                              <input type="text" class="form-control" id="name">
+                          </div>
 
-                            <hr>
-    
-                            <div class="form-group">
-                                <h3>Question 1</h3>
-                                <h4>Which color do you like the most?</h4>
-                                <select id="q1" class="custom-select custom-select-lg mb-3" >
-                                  <option selected>Select One</option>
-                                  <option value="1">Red</option>
-                                  <option value="2">Black</option>
-                                  <option value="3">Blue</option>
-                                  <option value="4">Yellow</option>
-                                  <option value="5">Purple</option>
-                                  <option value="6">Green</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <h3>Question 2</h3>
-                                <h4>What's your go-to kareoke song?</h4>
-                                <select id="q2" class="custom-select custom-select-lg mb-3">
-                                  <option selected>Select One</option>
-                                  <option value="1">Frozen "Let it Go"</option>
-                                  <option value="2">Beyonce "Single Ladies"</option>
-                                  <option value="3"> Journey "Don't Stop Believin'"</option>
-                                  <option value="4">Michael Jackson "Billie Jean"</option>
-                                  <option value="5"> Lou Bega "Mambo No. 5"</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <h3>Question 3</h3>
-                                <h4>What are you doing this weekend?</h4>
-                                <select id="q3" class="custom-select custom-select-lg mb-3">
-                                  <option selected>Select One</option>
-                                  <option value="1">Clubbing</option>
-                                  <option value="2">Bar hopping</option>
-                                  <option value="3">Gambling</option>
-                                  <option value="4">Watching Netflix</option>
-                                  <option value="5">Working</option>
-                                </select>
-                            </div>                   
-                            <div class="form-group">
-                                <h3>Question 4</h3>
-                                <h4>If you were arrested, what would be the charge?</h4>
-                                <select id="q4" class="custom-select custom-select-lg mb-3">
-                                  <option selected>Select One</option>
-                                  <option value="1">Fraud</option>
-                                  <option value="2">Shoplifting</option>
-                                  <option value="3">Public Intoxication</option>
-                                  <option value="4">Identity Theft</option>
-                                  <option value="5">Tax Evasion</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <h3>Question 5</h3>
-                                <h4>What's your superpower?</h4>
-                                <select id="q5" class="custom-select custom-select-lg mb-3">
-                                  <option selected>Select One</option>
-                                  <option value="1">Invisibility</option>
-                                  <option value="2">The Ability to Read Minds</option>
-                                  <option value="3">Superhuman Strenth</option>
-                                  <option value="4">Teleportation</option>
-                                  <option value="5">The Gift of Gab</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <h3>Question 6</h3>
-                                <h4>What's your New Year's Resolution?</h4>
-                                <select id="q6" class="custom-select custom-select-lg mb-3">
-                                  <option selected>Select One</option>
-                                  <option value="1">Stop worrying and enjoy life more</option>
-                                  <option value="2">Lose Weight</option>
-                                  <option value="3">Be more responsible</option>
-                                  <option value="4">Spend more time with my family</option>
-                                  <option value="5">Donate more to charity</option>
-                                </select>
-                            </div>                        
-                            <div class="form-group">
-                                <h3>Question 7</h3>
-                                <h4>What's your biggest weakness?</h4>
-                                <select id="q7" class="custom-select custom-select-lg mb-3">
-                                  <option selected>Select One</option>
-                                  <option value="1">I'm too honest</option>
-                                  <option value="2">I'm selfish</option>
-                                  <option value="3">I care way too much</option>
-                                  <option value="4">I'm a workaholic</option>
-                                  <option value="5">I don't take things seriously</option>
-                                </select>
-                            </div>                          
-                            <div class="form-group">
-                                <h3>Question 8</h3>
-                                <h4>What's the best series?</h4>
-                                <select id="q8" class="custom-select custom-select-lg mb-3">
-                                  <option selected>Select One</option>
-                                  <option value="1">Star Wars</option>
-                                  <option value="2">Harry Potter</option>
-                                  <option value="3">The Fast and The Furious</option>
-                                  <option value="4">The Lord of the Rings</option>
-                                  <option value="5">The Godfather</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <h3>Question 9</h3>
-                                <h4>What's your dream destination?</h4>
-                                <select id="q9" class="custom-select custom-select-lg mb-3">
-                                  <option selected>Select One</option>
-                                  <option value="1">Australia</option>
-                                  <option value="2">Thailand</option>
-                                  <option value="3">United Arab Emirates</option>
-                                  <option value="4">South Africa</option>
-                                  <option value="5">The Swiss Alps</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <h3>Question 10</h3>
-                                <h4>How do you get through tough times?</h4>
-                                <select id="q10" class="custom-select custom-select-lg mb-3">
-                                  <option selected>Select One</option>
-                                  <option value="1">Find humor in the situation</option>
-                                  <option value="2">Meditate</option>
-                                  <option value="3">Dump my problems onto someone else</option>
-                                  <option value="4">Devise a plan to make things better</option>
-                                  <option value="5">Work on my Mixtape</option>
-                                </select>
-                            </div>                             
-                        </form>
-                        <br>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-info btn-lg" id="submit-button">Submit</button>
-                        </div>
-                    </div>
+                          <div class="form-group">
+                              <label for="photo">Link to Photo (Required) </label>
+                              <input type="text" class="form-control" id="photo">
+                          </div>
+
+                          <hr>
+
+                          <div class="form-group">
+                              <h3>Question 1</h3>
+                              <h4>Which color do you like the most?</h4>
+                              <select id="q1" class="custom-select custom-select-lg mb-3" >
+                                <option selected>Select One</option>
+                                <option value="1">Red</option>
+                                <option value="2">Black</option>
+                                <option value="3">Blue</option>
+                                <option value="4">Yellow</option>
+                                <option value="5">Purple</option>
+                                <option value="6">Green</option>
+                              </select>
+                          </div>
+
+                          <div class="form-group">
+                              <h3>Question 2</h3>
+                              <h4>What's your go-to kareoke song?</h4>
+                              <select id="q2" class="custom-select custom-select-lg mb-3">
+                                <option selected>Select One</option>
+                                <option value="1">Frozen "Let it Go"</option>
+                                <option value="2">Beyonce "Single Ladies"</option>
+                                <option value="3"> Journey "Don't Stop Believin'"</option>
+                                <option value="4">Michael Jackson "Billie Jean"</option>
+                                <option value="5"> Lou Bega "Mambo No. 5"</option>
+                              </select>
+                          </div>
+
+                          <div class="form-group">
+                              <h3>Question 3</h3>
+                              <h4>What are you doing this weekend?</h4>
+                              <select id="q3" class="custom-select custom-select-lg mb-3">
+                                <option selected>Select One</option>
+                                <option value="1">Clubbing</option>
+                                <option value="2">Bar hopping</option>
+                                <option value="3">Gambling</option>
+                                <option value="4">Watching Netflix</option>
+                                <option value="5">Working</option>
+                              </select>
+                          </div>
+
+                          <div class="form-group">
+                              <h3>Question 4</h3>
+                              <h4>If you were arrested, what would be the charge?</h4>
+                              <select id="q4" class="custom-select custom-select-lg mb-3">
+                                <option selected>Select One</option>
+                                <option value="1">Fraud</option>
+                                <option value="2">Shoplifting</option>
+                                <option value="3">Public Intoxication</option>
+                                <option value="4">Identity Theft</option>
+                                <option value="5">Tax Evasion</option>
+                              </select>
+                          </div>
+
+                          <div class="form-group">
+                              <h3>Question 5</h3>
+                              <h4>What's your superpower?</h4>
+                              <select id="q5" class="custom-select custom-select-lg mb-3">
+                                <option selected>Select One</option>
+                                <option value="1">Invisibility</option>
+                                <option value="2">The Ability to Read Minds</option>
+                                <option value="3">Superhuman Strenth</option>
+                                <option value="4">Teleportation</option>
+                                <option value="5">The Gift of Gab</option>
+                              </select>
+                          </div>
+
+                          <div class="form-group">
+                              <h3>Question 6</h3>
+                              <h4>What's your New Year's Resolution?</h4>
+                              <select id="q6" class="custom-select custom-select-lg mb-3">
+                                <option selected>Select One</option>
+                                <option value="1">Stop worrying and enjoy life more</option>
+                                <option value="2">Lose Weight</option>
+                                <option value="3">Be more responsible</option>
+                                <option value="4">Spend more time with my family</option>
+                                <option value="5">Donate more to charity</option>
+                              </select>
+                          </div>             
+
+                          <div class="form-group">
+                              <h3>Question 7</h3>
+                              <h4>What's your biggest weakness?</h4>
+                              <select id="q7" class="custom-select custom-select-lg mb-3">
+                                <option selected>Select One</option>
+                                <option value="1">I'm too honest</option>
+                                <option value="2">I'm selfish</option>
+                                <option value="3">I care way too much</option>
+                                <option value="4">I'm a workaholic</option>
+                                <option value="5">I don't take things seriously</option>
+                              </select>
+                          </div>    
+
+                          <div class="form-group">
+                              <h3>Question 8</h3>
+                              <h4>What's the best series?</h4>
+                              <select id="q8" class="custom-select custom-select-lg mb-3">
+                                <option selected>Select One</option>
+                                <option value="1">Star Wars</option>
+                                <option value="2">Harry Potter</option>
+                                <option value="3">The Fast and The Furious</option>
+                                <option value="4">The Lord of the Rings</option>
+                                <option value="5">The Godfather</option>
+                              </select>
+                          </div>
+
+                          <div class="form-group">
+                              <h3>Question 9</h3>
+                              <h4>What's your dream destination?</h4>
+                              <select id="q9" class="custom-select custom-select-lg mb-3">
+                                <option selected>Select One</option>
+                                <option value="1">Australia</option>
+                                <option value="2">Thailand</option>
+                                <option value="3">United Arab Emirates</option>
+                                <option value="4">South Africa</option>
+                                <option value="5">The Swiss Alps</option>
+                              </select>
+                          </div>
+
+                          <div class="form-group">
+                              <h3>Question 10</h3>
+                              <h4>How do you get through tough times?</h4>
+                              <select id="q10" class="custom-select custom-select-lg mb-3">
+                                <option selected>Select One</option>
+                                <option value="1">Find humor in the situation</option>
+                                <option value="2">Meditate</option>
+                                <option value="3">Dump my problems onto someone else</option>
+                                <option value="4">Devise a plan to make things better</option>
+                                <option value="5">Work on my Mixtape</option>
+                              </select>
+                          </div>  
+
+                      </form>
+
+                      <br>
+
+                      <div class="text-center">
+                          <button type="submit" class="btn btn-info btn-lg" id="submit-button" data-toggle="modal" data-target="#myModal">Submit</button>
+
+
+                      </div>
+
+                  </div>
                 </div>
             </div>
+        </div>
 
         <div class="text-center">
-        <a id="friends-list-link" href="../api/friends">API Friends List</a> &bull;
-        <a id="github-link" href="https://github.com/Jihanna02/friend-finder">GitHub Repo</a>
+          <a id="friends-list-link" href="../api/friends">API Friends List</a> &bull;
+          <a id="github-link" href="https://github.com/Jihanna02/friend-finder">GitHub Repo</a>
+        </div>
+
     </div>
 
     <script type="text/javascript">
-    $("#submit-button").on("click", function(event) {
-        event.preventDefault();
+      $("#submit-button").on("click", function(event) {
+          event.preventDefault();
 
-        var newFriend = {
-            name: $("#name").val(),
-            photo: $("#photo").val(),
+          var newFriend = {
+              name: $("#name").val(),
+              photo: $("#photo").val(),
 
-            q1: $("#q1").val(),
-            q2: $("#q2").val(),
-            q3: $("#q3").val(),
-            q4: $("#q4").val(),
-            q5: $("#q5").val(),
-            q6: $("#q6").val(),
-            q7: $("#q7").val(),
-            q8: $("#q8").val(),
-            q9: $("#q9").val(),
-            q10: $("#q10").val()
-        };
+              q1: $("#q1").val(),
+              q2: $("#q2").val(),
+              q3: $("#q3").val(),
+              q4: $("#q4").val(),
+              q5: $("#q5").val(),
+              q6: $("#q6").val(),
+              q7: $("#q7").val(),
+              q8: $("#q8").val(),
+              q9: $("#q9").val(),
+              q10: $("#q10").val()
 
-        $.post("/api/friends", newFriend)
-          .done(function(data) {
+          };
+
+        $.post("/api/friends", newFriend,
+          function(data) {
+
             console.log(data);
+          });
+
         });
-    });
     </script>
 </body>
 

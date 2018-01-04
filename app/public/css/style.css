@@ -12,6 +12,14 @@ body {
 	background-attachment: fixed;
 }
 
+.modal-backdrop {
+    z-index: 1040 !important;
+}
+.modal-dialog {
+    margin: 2px auto;
+    z-index: 1100 !important;
+}
+
 .jumbotron {
 	background-color: rgba(255, 255, 255, 0.85);
 	margin: 0;
@@ -24,6 +32,7 @@ body {
 .logo {
 	width: 60%;
 }
+
 body {
 	font-family: 'Overpass', sans-serif;
 }
