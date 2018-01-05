@@ -2,7 +2,7 @@
 var friendsList = [
   {
     name: "Issa Rae",
-    photo: "https://media.giphy.com/media/l2JecpcPDclQKAp4A/giphy.gif",
+    photo: "/img/match-issa.jpg",
     q1: "1",
     q2: "1",
     q3: "1",
@@ -15,7 +15,7 @@ var friendsList = [
     q10: "1"
   }, {
     name: "Jerrod Carmichael",
-    photo: "https://media.giphy.com/media/l2JecpcPDclQKAp4A/giphy.gif",
+    photo: "/img/match-jerrod.jpg",
     q1: "2",
     q2: "2",
     q3: "2",
@@ -28,7 +28,7 @@ var friendsList = [
     q10: "2"
   },   {
     name: "Tiffany Haddish",
-    photo: "https://media.giphy.com/media/l2JecpcPDclQKAp4A/giphy.gif",
+    photo: "/img/match-tiffany.jpg",
     q1: "3",
     q2: "3",
     q3: "3",
@@ -41,7 +41,7 @@ var friendsList = [
     q10: "3"
   } ,   {
     name: "Keith Stanfield",
-    photo: "https://media.giphy.com/media/l2JecpcPDclQKAp4A/giphy.gif",
+    photo: "/img/match-keith.jpg",
     q1: "4",
     q2: "4",
     q3: "4",
@@ -54,7 +54,7 @@ var friendsList = [
     q10: "4"
   } ,   {
     name: "Tessa Thompson",
-    photo: "https://media.giphy.com/media/l2JecpcPDclQKAp4A/giphy.gif",
+    photo: "/img/match-tessa.jpg",
     q1: "5",
     q2: "5",
     q3: "5",
@@ -67,7 +67,7 @@ var friendsList = [
     q10: "5"
   } ,   {
     name: "Lil' Rel Howery",
-    photo: "https://media.giphy.com/media/l2JecpcPDclQKAp4A/giphy.gif",
+    photo: "/img/match-rel.jpg",
     q1: "6",
     q2: "6",
     q3: "6",
