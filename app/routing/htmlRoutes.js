@@ -17,6 +17,11 @@ module.exports = function(app) {
 	    res.sendFile(path.join(__dirname, "../data/friends.js"));
 	});
 
+	//catch all route
+	app.get('*',function (req, res) {
+        res.redirect('/');
+    });
+
 };
 
 
