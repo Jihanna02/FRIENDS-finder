@@ -14,6 +14,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
+
 </head>
 
 <body>
@@ -31,15 +33,20 @@
                       <h3 class="panel-title"><strong>Tell us about yourself</strong></h3>
                   </div>
                   <div class="panel-body">
-                      <form role="form" method="post" action="">
-                          <div class="form-group">
-                              <label for="name">Name (Required) </label>
-                              <input required type="text" class="form-control" id="name"  >
-                          </div>
+                      <form data-toggle="validator" role="form">
+  <div class="form-group">
+    <label for="name" class="control-label">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Cina Saffary" required>
+  </div>
+
+<!--                           <div class="form-group has-feedback">
+                              <label for="name" class="control-label">Name (Required) </label>
+                              <input type="text" class="form-control" id="name" required>
+                          </div> -->
 
                           <div class="form-group">
                               <label for="photo">Link to Photo (Required) </label>
-                              <input required type="text" class="form-control" id="photo"  >
+                              <input type="text" class="form-control" id="photo"  >
                           </div>
 
                           <hr>
@@ -203,15 +210,13 @@
                             </div>
                           </div>
 
+                        <div class="text-center">
+                          <button type="submit" class="btn btn-info btn-lg" id="submit-button">Submit</button>
+                        </div>
+
                       </form>
 
                       <br>
-
-                      <div class="text-center">
-                          <button type="submit" class="btn btn-info btn-lg" id="submit-button" data-toggle="modal" data-target="#myModal">Submit</button>
-
-
-                      </div>
 
                   </div>
                 </div>
@@ -228,11 +233,9 @@
     <script type="text/javascript">
       $("#submit-button").on("click", function(event) {
           event.preventDefault();
-
           var newFriend = {
               name: $("#name").val(),
               photo: $("#photo").val(),
-
               q1: $("#q1").val(),
               q2: $("#q2").val(),
               q3: $("#q3").val(),
@@ -243,15 +246,12 @@
               q8: $("#q8").val(),
               q9: $("#q9").val(),
               q10: $("#q10").val()
-
           };
-
         // var friendList;
         $.get("/api/friends", function(req, res) {
         //loads friends object when you go to that route
-
         friendList = req;
-        
+
           function displayMatch(m) {
             var matched = friendList[m];
             $("#myModalLabel").text("Your new BFF is:");
@@ -259,14 +259,14 @@
             $("#matchFace").attr("src", matched.photo);
           }
 
+          $('#myModal').modal('show');
+
           function compareMatches(n){
             var counterArray = [];
-
             for(i=0; i < friendList.length; i++){
               var oldFriendObject = friendList[i];
               var newFriendObject = n;
               var counter = 0;
-
               if(oldFriendObject.q1 === newFriendObject.q1){
                 counter++;
               }
@@ -297,24 +297,18 @@
               if(oldFriendObject.q10 === newFriendObject.q10){
                 counter++;
               }
-
               counterArray.push(counter);
             
           }
           
           var matchIndex = counterArray.indexOf(Math.max(...counterArray));
-
           displayMatch(matchIndex);
         };
-
         compareMatches(newFriend);
-
         });
-
-                  var newFriend = {
+              var newFriend = {
               name: $("#name").val(),
               photo: $("#photo").val(),
-
               q1: $("#q1").val(),
               q2: $("#q2").val(),
               q3: $("#q3").val(),
@@ -325,16 +319,13 @@
               q8: $("#q8").val(),
               q9: $("#q9").val(),
               q10: $("#q10").val()
-
           };
           
           //posts new friend to json
           $.post("/api/friends", newFriend,
             function(data) {
-
               return data;
           });
-
         });
     </script>
 </body>
