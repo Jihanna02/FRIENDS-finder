@@ -34,15 +34,11 @@
                   </div>
                   <div class="panel-body">
                       <form data-toggle="validator" role="form">
-  <div class="form-group">
-    <label for="name" class="control-label">Name</label>
-    <input type="text" class="form-control" id="name" placeholder="Cina Saffary" required>
-  </div>
+                        <div class="form-group">
+                          <label for="name" class="control-label">Name</label>
+                          <input type="text" class="form-control" id="name" placeholder="Cina Saffary" required>
+                        </div>
 
-<!--                           <div class="form-group has-feedback">
-                              <label for="name" class="control-label">Name (Required) </label>
-                              <input type="text" class="form-control" id="name" required>
-                          </div> -->
 
                           <div class="form-group">
                               <label for="photo">Link to Photo (Required) </label>
@@ -233,7 +229,7 @@
     <script type="text/javascript">
       $("#submit-button").on("click", function(event) {
           event.preventDefault();
-
+      
           //gets object from form data
           var newFriend = {
               name: $("#name").val(),
@@ -252,14 +248,27 @@
 
           
 
-          for (val in newFriend) {
-            if ( isInteger(val)) {
-              console.log('working')
-              alert('please make sure that all items are filled in!')
-            }
-            else{
-              //gets final match from friendList object
-              $.get("/api/friends", function(req, res) {
+          for (let i = 0; i < Object.keys(newFriend).length; i++) {
+         
+        for (let val in newFriend){
+          if ( newFriend[val] === '') {
+            console.log(val)
+            console.log(newFriend)
+            alert('please make sure that all items are filled in!')
+            return
+          }
+
+
+        }
+            
+
+          
+        
+       //gets final match from friendList object
+              
+          }
+       console.log('look at me')
+       $.get("/api/friends", function(req, res) {
               friendList = req;
 
               
@@ -270,8 +279,6 @@
               $.post("/api/friends", newFriend, function(data) {
               return data;
               });
-            }
-          }
         // var friendList;
         
           
@@ -297,36 +304,36 @@
               var oldFriendObject = friendList[i];
               var newFriendObject = n;
               var counter = 0;
-              if(oldFriendObject.q1 === newFriendObject.q1){
+              if(`${oldFriendObject}.q${i}` === `${newFriendObject}.q${i}`){
                 counter++;
               }
-              if(oldFriendObject.q2 === newFriendObject.q2){
-                counter++;
-              }
-              if(oldFriendObject.q3 === newFriendObject.q3){
-                counter++;
-              }
-              if(oldFriendObject.q4 === newFriendObject.q4){
-                counter++;
-              }
-              if(oldFriendObject.q5 === newFriendObject.q5){
-                counter++;
-              }
-              if(oldFriendObject.q6 === newFriendObject.q6){
-                counter++;
-              }
-              if(oldFriendObject.q7 === newFriendObject.q7){
-                counter++;
-              }
-              if(oldFriendObject.q8 === newFriendObject.q8){
-                counter++;
-              }
-              if(oldFriendObject.q9 === newFriendObject.q9){
-                counter++;
-              }
-              if(oldFriendObject.q10 === newFriendObject.q10){
-                counter++;
-              }
+              // if(oldFriendObject.q2 === newFriendObject.q2){
+              //   counter++;
+              // }
+              // if(oldFriendObject.q3 === newFriendObject.q3){
+              //   counter++;
+              // }
+              // if(oldFriendObject.q4 === newFriendObject.q4){
+              //   counter++;
+              // }
+              // if(oldFriendObject.q5 === newFriendObject.q5){
+              //   counter++;
+              // }
+              // if(oldFriendObject.q6 === newFriendObject.q6){
+              //   counter++;
+              // }
+              // if(oldFriendObject.q7 === newFriendObject.q7){
+              //   counter++;
+              // }
+              // if(oldFriendObject.q8 === newFriendObject.q8){
+              //   counter++;
+              // }
+              // if(oldFriendObject.q9 === newFriendObject.q9){
+              //   counter++;
+              // }
+              // if(oldFriendObject.q10 === newFriendObject.q10){
+              //   counter++;
+              // }
               counterArray.push(counter);
             
           }
