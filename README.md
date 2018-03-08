@@ -1,6 +1,6 @@
 # friend-finder
 
-Demo Version: https://friend-finder-fsf.herokuapp.com/
+Demo Version: https://f-r-i-e-n-d-s-finder.herokuapp.com/
 
 ### Overview
 
