@@ -1,9 +1,11 @@
 # friend-finder
-
-Demo Version: https://friend-finder-fsf.herokuapp.com/
-
 ### Overview
 
-In this activity, you'll build a compatibility-based "FriendFinder" application -- basically a dating app. This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match. 
+This full-stack application takes in the results from a user's survey, and compares their answers with those from other uses in our database. After appliying comparison logic, the app will select the user with the best overall match and display their name and picture.
 
-You will use Express to handle routing. Make sure you deploy your app to Heroku so other users can fill it out.
+### Technologies Used
+* HTML 
+* CSS & Bootstrap
+* JQuery
+* Node.Js
+* Express.Js
